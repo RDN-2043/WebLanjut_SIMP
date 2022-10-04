@@ -1,0 +1,11 @@
+table{
+    width: 90%
+}
+
+.tdJudul{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 1px;
+    max-width: 200px;
+}
