@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 02, 2022 at 08:22 AM
+-- Generation Time: Oct 07, 2022 at 02:09 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -24,10 +24,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `perpustakaan`
+-- Table structure for table `tabel_akun`
 --
 
-CREATE TABLE `perpustakaan` (
+CREATE TABLE `tabel_akun` (
+  `username` varchar(256) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `tipe` enum('Master-Admin','Admin','User','') NOT NULL,
+  `validasi` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tabel_buku`
+--
+
+CREATE TABLE `tabel_buku` (
   `id` int(5) NOT NULL,
   `isbn` varchar(17) NOT NULL,
   `judul` varchar(256) NOT NULL,
@@ -40,21 +54,40 @@ CREATE TABLE `perpustakaan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `perpustakaan`
+-- Dumping data for table `tabel_buku`
 --
 
-INSERT INTO `perpustakaan` (`id`, `isbn`, `judul`, `pengarang`, `penerbit`, `terbit`, `jumlah`, `ditambahkan`, `diperbarui`) VALUES
-(1, '978-979-107-882-5', 'Akuntansi Pengantar 1', 'Supardi', 'Gava Media', 2009, 2, '2022-10-02 12:21:19.000000', '2022-10-02 12:21:19.000000'),
-(2, '978-979-328-876-5', 'Aplikasi Klinis Induk Ovulasi & Stimulasi Ovariu', 'Samsulhadi', 'Sagung Seto', 2013, 2, '2022-10-02 12:21:19.000000', '2022-10-02 12:21:19.000000');
+INSERT INTO `tabel_buku` (`id`, `isbn`, `judul`, `pengarang`, `penerbit`, `terbit`, `jumlah`, `ditambahkan`, `diperbarui`) VALUES
+(1, '978-979-107-882-5', 'Akuntansi Pengantar 1', 'Supardi', 'Gava Media', 2009, 5, '2022-10-02 12:21:19.000000', '2022-10-04 12:18:15.000000'),
+(2, '978-979-328-876-5', 'Aplikasi Klinis Induk Ovulasi & Stimulasi Ovariu', 'Samsulhadi', 'Sagung Seto', 2013, -1, '2022-10-02 12:21:19.000000', '2022-10-07 07:07:34.000000');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tabel_pinjam`
+--
+
+CREATE TABLE `tabel_pinjam` (
+  `username` varchar(256) NOT NULL,
+  `isbn` varchar(256) NOT NULL,
+  `ditambahkan` datetime(6) NOT NULL,
+  `diperbarui` datetime(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `perpustakaan`
+-- Indexes for table `tabel_akun`
 --
-ALTER TABLE `perpustakaan`
+ALTER TABLE `tabel_akun`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Indexes for table `tabel_buku`
+--
+ALTER TABLE `tabel_buku`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -62,9 +95,9 @@ ALTER TABLE `perpustakaan`
 --
 
 --
--- AUTO_INCREMENT for table `perpustakaan`
+-- AUTO_INCREMENT for table `tabel_buku`
 --
-ALTER TABLE `perpustakaan`
+ALTER TABLE `tabel_buku`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 

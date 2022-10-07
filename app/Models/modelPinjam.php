@@ -4,10 +4,10 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class modelPerpustakaan extends Model
+class modelPinjam extends Model
 {
-    protected $table = "table_buku";
-    protected $allowedFields = ['judul', 'pengarang'. 'penerbit', 'terbit', 'jumlah'];
+    protected $table = "tabel_pinjam";
+    protected $allowedFields = ['username', 'isbn'];
 
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';

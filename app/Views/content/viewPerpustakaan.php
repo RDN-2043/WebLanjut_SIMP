@@ -18,7 +18,7 @@
     <tbody class="table-group-divider">
         <?php
         $i = 1;
-        foreach ($perpustakaan as $data) :
+        foreach ($listBuku as $data) :
         ?>
             <tr>
                 <th class="align-middle text-center" scope="row"><?= $i++; ?></th>
@@ -28,7 +28,19 @@
                 <td class="align-middle text-center"><?= $data['terbit']; ?></td>
                 <td class="align-middle text-center"><?= $data['isbn']; ?></td>
                 <td class="align-middle text-center"><?= $data['jumlah']; ?></td>
-                <td class="align-middle text-center"><button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i>Pinjam</button></td>
+                <td class="align-middle text-center">
+                    <form action="/pinjam/<?= $data['id']; ?>">
+                    <?php 
+                    if($data['jumlah'] > 0){
+                        print "<button type='submit' class='btn btn-primary'><i class='fa fa-paper-plane'></i>Pinjam</button>";
+                    }
+                    else
+                    {
+                        print "<button type='submit' class='btn btn-primary disabled'><i class='fa fa-paper-plane'></i>Pinjam</button>";
+                    }
+                    ?>
+                    </form>
+                </td>
             </tr>
         <?php endforeach; ?>
     </tbody>
