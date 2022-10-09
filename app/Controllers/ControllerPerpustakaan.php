@@ -19,6 +19,16 @@ class ControllerPerpustakaan extends BaseController
         return view('content/viewPerpustakaan', $data);
     }
 
+    public function test(){
+
+        $data = [
+            'title' => "test"
+        ];
+
+        return view("content/viewProfile", $data);
+        
+    }
+
     public function pinjam($idBuku)
     {
         $modelBuku = new modelBuku();

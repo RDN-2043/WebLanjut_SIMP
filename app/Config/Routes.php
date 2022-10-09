@@ -37,6 +37,7 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'ControllerPerpustakaan::index');
 $routes->get('/pinjam/(:any)', 'ControllerPerpustakaan::pinjam/$1');
+$routes->get('/test', 'ControllerPerpustakaan::test');
 
 /*
  * --------------------------------------------------------------------
