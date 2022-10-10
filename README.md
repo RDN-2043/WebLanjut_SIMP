@@ -1,6 +1,6 @@
 # WebLanjut_SIMP
  
-Judul : SIMP (Sistem Informasi Manajemen Perpustakaan) 
+Judul : SIMPERS (Sistem Informasi Manajemen Perpustakaan) 
 
 Anggota :
 1. Rafi Dinata 2017051043 B (KETUA)
