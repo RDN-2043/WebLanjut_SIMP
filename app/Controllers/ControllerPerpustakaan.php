@@ -25,7 +25,7 @@ class ControllerPerpustakaan extends BaseController
             'title' => "test"
         ];
 
-        return view("content/viewProfile", $data);
+        return view("content/viewAdminRegister", $data);
         
     }
 
