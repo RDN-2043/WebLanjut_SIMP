@@ -13,4 +13,5 @@ class modelAkun extends Model
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'ditambahkan';
     protected $updatedField  = 'diperbarui';
+    protected $deletedField  = 'dihapus';
 }

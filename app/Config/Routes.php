@@ -35,10 +35,14 @@ $routes->set404Override();
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'ControllerPerpustakaan::index');
+$routes->get('/', 'ControllerPerpustakaan::landingPage');
 $routes->get('/pinjam/(:any)', 'ControllerPerpustakaan::pinjam/$1');
+$routes->get('/account', 'ControllerPerpustakaan::signIn');
+$routes->get('/perpustakaan', 'ControllerPerpustakaan::perpustakaan');
 $routes->get('/test', 'ControllerPerpustakaan::test');
 
+$routes->post('/signupuser', 'ControllerAkun::signUpUser');
+$routes->post('/signin', 'ControllerAkun::signIn');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

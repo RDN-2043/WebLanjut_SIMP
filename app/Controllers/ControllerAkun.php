@@ -3,23 +3,33 @@
 namespace App\Controllers;
 
 use App\Models\modelAkun;
+use App\Controllers\ControllerPerpustakaan;
 
 class ControllerAkun extends BaseController
 {
+    private $modelAkun;
+
+    public function __construct()
+    {
+        $this->modelAkun = new modelAkun();
+    }
     public function signIn()
     {
         $username = $this->request->getVar('username');
 
         if (empty($this->findAccount($username))) {
-            return redirect()->to('/viewSignInUp');
+            return redirect()->to('/viewLandingPage');
         }
 
         $password = $this->request->getVar('password');
         $akun = $this->signingIn($username, $password);
 
-        if(empty($akun) || $akun['validasi'] == false) {
-            return redirect()->to('/viewSignInUp');
+        if(empty($akun) || $akun['validasi'] == 0) {
+            return view('content/viewLandingPage');
         }
+
+        session_start();
+        $_SESSION['username'] = $akun['username'];
 
         switch ($akun['tipe']) {
             case "Master-Admin":
@@ -31,50 +41,44 @@ class ControllerAkun extends BaseController
                 break;
 
             case "User":
-                return redirect()->to('/viewUser');
+                return redirect()->to('/perpustakaan');
                 break;
         }
-
-        session_start();
-        $_SESSION['username'] = $akun['username'];
-
-        $data = [
-            'title' => "Dashboard"
-        ];
-
-        return view('content/viewPerpustakaan', $data);
     }
 
     public function signUpAdmin()
     {
         $username = $this->request->getVar('username');
+        $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        $this->signUp($username, $password, "Admin", true);
+        $this->signUp($username, $email, $password, "Admin", true);
     }
 
     public function signUpUser()
     {
         $username = $this->request->getVar('username');
+        $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        $this->signUp($username, $password, "User", false);
+        $this->signUp($username, $email, $password, "User", false);
     }
 
-    public function signUp($username, $password, $tipe, $validasi)
+    public function signUp($username, $email, $password, $tipe, $validasi)
     {
         if(!empty($this->findAccount($username))) {
-            return redirect()->to('/viewSignInUp');
+            return redirect()->to('/viewAccount');
         }
 
         $this->modelAkun->save([
             'username' => $username,
+            'email' => $email,
             'password' => $password,
             'tipe' => $tipe,
             'validasi' => $validasi
         ]);
 
-        return redirect()->to('/viewDashboard');
+        return redirect()->to('/viewLandingPage');
     }
 
     public function logOut(){

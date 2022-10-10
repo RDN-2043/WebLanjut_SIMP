@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 07, 2022 at 02:09 PM
+-- Generation Time: Oct 11, 2022 at 12:30 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -32,8 +32,19 @@ CREATE TABLE `tabel_akun` (
   `password` varchar(256) NOT NULL,
   `email` varchar(256) NOT NULL,
   `tipe` enum('Master-Admin','Admin','User','') NOT NULL,
-  `validasi` tinyint(1) NOT NULL
+  `validasi` tinyint(1) NOT NULL,
+  `ditambahkan` datetime NOT NULL,
+  `diperbarui` datetime NOT NULL,
+  `dihapus` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tabel_akun`
+--
+
+INSERT INTO `tabel_akun` (`username`, `password`, `email`, `tipe`, `validasi`, `ditambahkan`, `diperbarui`, `dihapus`) VALUES
+('rdn2043', 'rdn2043', '', 'User', 0, '2022-10-10 16:51:50', '2022-10-10 16:51:50', '0000-00-00 00:00:00'),
+('rdnTrue', 'rdnTrue', 'rdnTrue@gmail.com', 'User', 1, '2022-10-10 23:55:58', '2022-10-10 23:55:58', '2022-10-10 23:55:58');
 
 -- --------------------------------------------------------
 

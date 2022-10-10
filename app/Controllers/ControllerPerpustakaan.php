@@ -6,27 +6,26 @@ use App\Models\modelBuku;
 
 class ControllerPerpustakaan extends BaseController
 {
-    public function index()
+    public function test()
+    {
+        $data = [
+            'title' => "test"
+        ];
+
+        return view("content/viewAccount", $data);
+    }
+
+    public function perpustakaan()
     {
         $modelBuku = new modelBuku();
         $listBuku = $modelBuku->findAll();
 
         $data = [
-                'title' => "Perpustakaan",
-                'listBuku' => $listBuku
-            ];
-
-        return view('content/viewPerpustakaan', $data);
-    }
-
-    public function test(){
-
-        $data = [
-            'title' => "test"
+            'title' => "Perpustakaan",
+            'listBuku' => $listBuku
         ];
 
-        return view("content/viewAdminRegister", $data);
-        
+        return view('content/viewPerpustakaan', $data);
     }
 
     public function pinjam($idBuku)
@@ -37,7 +36,7 @@ class ControllerPerpustakaan extends BaseController
         $this->decreaseBook($idBuku, $buku);
         
         //return redirect()->to('/viewDaftarPinjam');
-        return $this->index();
+        return $this->perpustakaan();
     }
 
     public function decreaseBook($idBuku, $buku)
