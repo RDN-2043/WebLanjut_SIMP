@@ -15,6 +15,24 @@ class ControllerPerpustakaan extends BaseController
         return view("content/viewAccount", $data);
     }
 
+    public function signIn()
+    {
+        $data = [
+            'title' => "SignIn"
+        ];
+
+        return view("content/viewAccount", $data);
+    }
+
+    public function landingPage()
+    {
+        $data = [
+            'title' => "Landing Page"
+        ];
+
+        return view('content/viewLandingPage', $data);
+    }
+
     public function perpustakaan()
     {
         $modelBuku = new modelBuku();

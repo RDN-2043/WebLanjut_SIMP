@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class modelAkun extends Model
 {
     protected $table = "tabel_akun";
-    protected $allowedFields = ['username', 'password', 'tipe', 'validasi'];
+    protected $allowedFields = ['username', 'email', 'password', 'tipe', 'validasi'];
 
     protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
