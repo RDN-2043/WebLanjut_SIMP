@@ -18,14 +18,14 @@ class ControllerAkun extends BaseController
         $username = $this->request->getVar('username');
 
         if (empty($this->findAccount($username))) {
-            return redirect()->to('/viewLandingPage');
+            return redirect()->to('/account');
         }
 
         $password = $this->request->getVar('password');
         $akun = $this->signingIn($username, $password);
 
         if(empty($akun) || $akun['validasi'] == 0) {
-            return view('content/viewLandingPage');
+            return redirect()->to('/account');
         }
 
         session_start();
