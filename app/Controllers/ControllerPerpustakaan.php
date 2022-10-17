@@ -21,6 +21,7 @@ class ControllerPerpustakaan extends BaseController
             'title' => "SignIn"
         ];
 
+<<<<<<< Updated upstream
         return view("content/viewAccount", $data);
     }
 
@@ -31,6 +32,9 @@ class ControllerPerpustakaan extends BaseController
         ];
 
         return view('content/viewLandingPage', $data);
+=======
+        return view('content/viewAdminRegister', $data);
+>>>>>>> Stashed changes
     }
 
     public function perpustakaan()
