@@ -12,9 +12,6 @@
 <body class="p-3 m-0 border-0 bd-example">
     <?php
 
-    use App\Models\modelAkun;
-
-    $modelAkun = new modelAkun();
     $akun = null;
 
     if (session_status() === PHP_SESSION_NONE) {

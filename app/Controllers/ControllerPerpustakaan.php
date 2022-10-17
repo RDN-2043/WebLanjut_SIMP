@@ -12,7 +12,7 @@ class ControllerPerpustakaan extends BaseController
             'title' => "test"
         ];
 
-        return view("content/viewProfile", $data);
+        return view("content/viewTransaction", $data);
     }
 
     public function signIn()
@@ -23,7 +23,6 @@ class ControllerPerpustakaan extends BaseController
             'title' => "SignIn"
         ];
 
-<<<<<<< Updated upstream
         return view("content/viewAccount", $data);
     }
 
@@ -34,9 +33,6 @@ class ControllerPerpustakaan extends BaseController
         ];
 
         return view('content/viewLandingPage', $data);
-=======
-        return view('content/viewAdminRegister', $data);
->>>>>>> Stashed changes
     }
 
     public function perpustakaan()

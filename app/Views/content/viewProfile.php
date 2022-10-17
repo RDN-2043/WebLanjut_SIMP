@@ -3,9 +3,6 @@
 <?= $this->section('content'); ?>
 <?php
 
-use App\Models\modelAkun;
-
-$modelAkun = new modelAkun();
 $akun = null;
 
 if (session_status() === PHP_SESSION_NONE) {
