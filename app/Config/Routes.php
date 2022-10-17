@@ -39,6 +39,7 @@ $routes->get('/', 'ControllerPerpustakaan::landingPage');
 $routes->get('/pinjam/(:any)', 'ControllerPerpustakaan::pinjam/$1');
 $routes->get('/account', 'ControllerPerpustakaan::signIn');
 $routes->get('/perpustakaan', 'ControllerPerpustakaan::perpustakaan');
+$routes->get('/profile', 'ControllerPerpustakaan::profile');
 $routes->get('/test', 'ControllerPerpustakaan::test');
 
 $routes->post('/signupuser', 'ControllerAkun::signUpUser');

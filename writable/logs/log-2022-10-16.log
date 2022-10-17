@@ -1,0 +1,109 @@
+ERROR - 2022-10-16 18:10:07 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(94): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(20): App\Controllers\ControllerAkun->findAccount('customer1')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\ControllerAkun->signIn()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(94): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(20): App\Controllers\ControllerAkun->findAccount('customer1')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\ControllerAkun->signIn()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-10-16 18:10:07 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\ControllerAkun.php(94): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ControllerAkun.php(20): App\Controllers\ControllerAkun->findAccount('customer1')
+ 7 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerAkun->signIn()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-16 20:44:50 --> Undefined variable $akun
+in APPPATH\Views\content\viewProfile.php on line 15.
+ 1 APPPATH\Views\content\viewProfile.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $akun', 'APPPATH\\Views\\content\\viewProfile.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewProfile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewProfile', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(15): view('content/viewProfile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->test()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-16 20:45:19 --> Undefined variable $listBuku
+in APPPATH\Views\content\viewPerpustakaan.php on line 21.
+ 1 APPPATH\Views\content\viewPerpustakaan.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listBuku', 'APPPATH\\Views\\content\\viewPerpustakaan.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewPerpustakaan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewPerpustakaan', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(65): view('content/viewPerpustakaan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-16 20:45:51 --> Undefined variable $akun
+in APPPATH\Views\content\viewProfile.php on line 15.
+ 1 APPPATH\Views\content\viewProfile.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $akun', 'APPPATH\\Views\\content\\viewProfile.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewProfile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewProfile', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(65): view('content/viewProfile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-16 20:48:27 --> Undefined variable $akun
+in APPPATH\Views\content\viewProfile.php on line 15.
+ 1 APPPATH\Views\content\viewProfile.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $akun', 'APPPATH\\Views\\content\\viewProfile.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewProfile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewProfile', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(67): view('content/viewProfile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-16 20:54:23 --> Undefined variable $akun
+in APPPATH\Views\content\viewProfile.php on line 5.
+ 1 APPPATH\Views\content\viewProfile.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $akun', 'APPPATH\\Views\\content\\viewProfile.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewProfile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewProfile', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(67): view('content/viewProfile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

@@ -12,11 +12,13 @@ class ControllerPerpustakaan extends BaseController
             'title' => "test"
         ];
 
-        return view("content/viewAccount", $data);
+        return view("content/viewProfile", $data);
     }
 
     public function signIn()
     {
+        $_SESSION['akun'] = null;
+
         $data = [
             'title' => "SignIn"
         ];
@@ -56,9 +58,17 @@ class ControllerPerpustakaan extends BaseController
         $buku = $modelBuku->where('id', $idBuku)->first();
 
         $this->decreaseBook($idBuku, $buku);
-        
-        //return redirect()->to('/viewDaftarPinjam');
+
         return $this->perpustakaan();
+    }
+
+    public function profile()
+    {
+        $data = [
+            'title' => "Profile"
+        ];
+
+        return view('content/viewProfile', $data);
     }
 
     public function decreaseBook($idBuku, $buku)

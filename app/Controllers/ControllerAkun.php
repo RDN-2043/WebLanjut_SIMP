@@ -13,36 +13,39 @@ class ControllerAkun extends BaseController
     {
         $this->modelAkun = new modelAkun();
     }
+
     public function signIn()
     {
         $username = $this->request->getVar('username');
 
         if (empty($this->findAccount($username))) {
-            return redirect()->to('/account');
+            echo "<script>alert('Username/Password tidak sesuai!');window.location.href='account';</script>";
         }
+        else {
+            $password = $this->request->getVar('password');
+            $akun = $this->signingIn($username, $password);
 
-        $password = $this->request->getVar('password');
-        $akun = $this->signingIn($username, $password);
+            if (empty($akun) || $akun['validasi'] == 0) {
 
-        if(empty($akun) || $akun['validasi'] == 0) {
-            return redirect()->to('/account');
-        }
+                echo "<script>alert('Akun belum divalidasi!');window.location.href='account';</script>";
+            } else {
+                session_start();
+                $_SESSION['akun'] = $akun;
 
-        session_start();
-        $_SESSION['username'] = $akun['username'];
+                switch ($akun['tipe']) {
+                    case "Master-Admin":
+                        return redirect()->to('/viewMasterAdmin');
+                        break;
 
-        switch ($akun['tipe']) {
-            case "Master-Admin":
-                return redirect()->to('/viewMasterAdmin');
-                break;
+                    case "Admin":
+                        return redirect()->to('/viewAdmin');
+                        break;
 
-            case "Admin":
-                return redirect()->to('/viewAdmin');
-                break;
-
-            case "User":
-                return redirect()->to('/perpustakaan');
-                break;
+                    case "User":
+                        return redirect()->to('/perpustakaan');
+                        break;
+                }
+            }
         }
     }
 
@@ -67,18 +70,19 @@ class ControllerAkun extends BaseController
     public function signUp($username, $email, $password, $tipe, $validasi)
     {
         if(!empty($this->findAccount($username))) {
-            return redirect()->to('/account');
+            echo "<script>alert('Username telah digunakan!');window.location.href='account';</script>";
         }
+        else {
+            $this->modelAkun->save([
+                'username' => $username,
+                'email' => $email,
+                'password' => $password,
+                'tipe' => $tipe,
+                'validasi' => $validasi
+            ]);
 
-        $this->modelAkun->save([
-            'username' => $username,
-            'email' => $email,
-            'password' => $password,
-            'tipe' => $tipe,
-            'validasi' => $validasi
-        ]);
-
-        return redirect()->to('/account');
+            echo "<script>alert('Akun berhasil dibuat!');window.location.href='account';</script>";
+        }
     }
 
     public function logOut(){

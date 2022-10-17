@@ -10,6 +10,22 @@
 </head>
 
 <body class="p-3 m-0 border-0 bd-example">
+    <?php
+
+    use App\Models\modelAkun;
+
+    $modelAkun = new modelAkun();
+    $akun = null;
+
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (isset($_SESSION['akun'])) {
+        $akun = $_SESSION['akun'];
+    }
+    
+    ?>
     <!--     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -70,7 +86,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/test">Profile</a>
+                            <a class="nav-link" href="/profile">Profile</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
