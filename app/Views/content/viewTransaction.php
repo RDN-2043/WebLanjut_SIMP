@@ -46,7 +46,6 @@ if (isset($_SESSION['akun'])) {
             ?>
                 <tr>
                   <td data-label="Username">
-                    <img alt="..." src="#">
                     <a class="text-heading font-semibold" href="#">
                       <?= $akun['username']; ?>
                     </a>
