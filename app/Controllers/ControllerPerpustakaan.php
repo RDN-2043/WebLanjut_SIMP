@@ -12,16 +12,16 @@ class ControllerPerpustakaan extends BaseController
             'title' => "test"
         ];
 
-        return view("content/viewTransaction", $data);
+        return view("content/viewUser", $data);
     }
 
-    public function member()
+    public function transaction()
     {
         $data = [
-            'title' => "member"
+            'title' => "transaction"
         ];
 
-        return view("content/viewUser", $data);
+        return view("content/viewTransaction", $data);
     }
 
     public function signIn()

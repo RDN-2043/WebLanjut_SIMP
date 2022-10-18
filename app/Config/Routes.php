@@ -41,6 +41,7 @@ $routes->get('/account', 'ControllerPerpustakaan::signIn');
 $routes->get('/perpustakaan', 'ControllerPerpustakaan::perpustakaan');
 $routes->get('/profile', 'ControllerPerpustakaan::profile');
 $routes->get('/test', 'ControllerPerpustakaan::test');
+$routes->get('/transaction', 'ControllerPerpustakaan::transaction');
 
 $routes->post('/signupuser', 'ControllerAkun::signUpUser');
 $routes->post('/signin', 'ControllerAkun::signIn');
