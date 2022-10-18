@@ -15,6 +15,15 @@ class ControllerPerpustakaan extends BaseController
         return view("content/viewTransaction", $data);
     }
 
+    public function member()
+    {
+        $data = [
+            'title' => "member"
+        ];
+
+        return view("content/viewUser", $data);
+    }
+
     public function signIn()
     {
         $_SESSION['akun'] = null;

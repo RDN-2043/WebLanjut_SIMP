@@ -1,0 +1,445 @@
+ERROR - 2022-10-17 21:02:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Views\content\viewTransaction.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Common.php(1142): CodeIgniter\View\View->render('content/viewTra...', Array, true)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(15): view('content/viewTra...', Array)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->test()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#13 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Views\content\viewTransaction.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Common.php(1142): CodeIgniter\View\View->render('content/viewTra...', Array, true)
+#9 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(15): view('content/viewTra...', Array)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->test()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2022-10-17 21:02:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Views\content\viewTransaction.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewTransaction.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewTransaction', [], true)
+ 9 APPPATH\Controllers\ControllerPerpustakaan.php(15): view('content/viewTransaction', [...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->test()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-17 21:02:37 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Views\content\viewTransaction.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Common.php(1142): CodeIgniter\View\View->render('content/viewTra...', Array, true)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(15): view('content/viewTra...', Array)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->test()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#13 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Views\content\viewTransaction.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Common.php(1142): CodeIgniter\View\View->render('content/viewTra...', Array, true)
+#9 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(15): view('content/viewTra...', Array)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->test()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2022-10-17 21:02:37 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Views\content\viewTransaction.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewTransaction.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewTransaction', [], true)
+ 9 APPPATH\Controllers\ControllerPerpustakaan.php(15): view('content/viewTransaction', [...])
+10 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->test()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-17 21:02:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->perpustakaan()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(41): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->perpustakaan()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-10-17 21:02:46 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_buku`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(41): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->perpustakaan()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-17 21:03:02 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(41): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->perpustakaan()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(41): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->perpustakaan()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-10-17 21:03:02 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_buku`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(41): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->perpustakaan()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-17 21:03:43 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-10-17 21:03:43 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-17 21:04:09 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-10-17 21:04:09 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-17 21:04:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-10-17 21:04:28 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-17 21:04:37 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-10-17 21:04:37 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-10-17 21:05:44 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-10-17 21:05:44 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\ControllerAkun.php(95): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\ControllerAkun.php(21): App\Controllers\ControllerAkun->findAccount('admin')
+ 7 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerAkun->signIn()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

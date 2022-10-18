@@ -25,7 +25,7 @@ if (isset($_SESSION['akun'])) {
   <div class="container">
     <div class="card">
       <div class="card-header">
-        <h6>Bootstrap 5 Table</h6>
+        <h6>Table Transaksi</h6>
 
       </div>
       <div class="table-responsive">
