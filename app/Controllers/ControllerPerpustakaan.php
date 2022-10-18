@@ -15,6 +15,15 @@ class ControllerPerpustakaan extends BaseController
         return view("content/viewUser", $data);
     }
 
+    public function register()
+    {
+        $data = [
+            'title' => "Register"
+        ];
+
+        return view("content/viewAdminRegister", $data);
+    }
+
     public function transaction()
     {
         $data = [
