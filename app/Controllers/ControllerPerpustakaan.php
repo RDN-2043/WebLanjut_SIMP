@@ -24,13 +24,13 @@ class ControllerPerpustakaan extends BaseController
         return view("content/viewAdminRegister", $data);
     }
 
-    public function transaction()
+    public function history()
     {
         $data = [
-            'title' => "transaction"
+            'title' => "History"
         ];
 
-        return view("content/viewTransaction", $data);
+        return view("content/viewHistory", $data);
     }
 
     public function signIn()

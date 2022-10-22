@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/assets/css/docs.css">
     <title><?= $title; ?></title>
 </head>
 
@@ -21,7 +22,7 @@
     if (isset($_SESSION['akun'])) {
         $akun = $_SESSION['akun'];
     }
-    
+
     ?>
     <!--     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -90,7 +91,7 @@
                             <a class="nav-link" href="/test">User</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/transaction">History</a>
+                            <a class="nav-link" href="/history">History</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/register">Register</a>

@@ -41,10 +41,11 @@ $routes->get('/account', 'ControllerPerpustakaan::signIn');
 $routes->get('/perpustakaan', 'ControllerPerpustakaan::perpustakaan');
 $routes->get('/profile', 'ControllerPerpustakaan::profile');
 $routes->get('/test', 'ControllerPerpustakaan::test');
-$routes->get('/transaction', 'ControllerPerpustakaan::transaction');
+$routes->get('/history', 'ControllerPerpustakaan::history');
 $routes->get('/register', 'ControllerPerpustakaan::register');
 
 $routes->post('/signupuser', 'ControllerAkun::signUpUser');
+$routes->post('/signupadmin', 'ControllerAkun::signUpAdmin');
 $routes->post('/signin', 'ControllerAkun::signIn');
 
 /*

@@ -55,7 +55,7 @@ class ControllerAkun extends BaseController
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        $this->signUp($username, $email, $password, "Admin", true);
+        return $this->signUp($username, $email, $password, "Admin", true, "register", "register");
     }
 
     public function signUpUser()
@@ -64,13 +64,13 @@ class ControllerAkun extends BaseController
         $email = $this->request->getVar('email');
         $password = $this->request->getVar('password');
 
-        return $this->signUp($username, $email, $password, "User", false);
+        return $this->signUp($username, $email, $password, "User", false, "account", "account");
     }
 
-    public function signUp($username, $email, $password, $tipe, $validasi)
+    public function signUp($username, $email, $password, $tipe, $validasi, $signUpSuccess, $signUpFailed)
     {
         if(!empty($this->findAccount($username))) {
-            echo "<script>alert('Username telah digunakan!');window.location.href='account';</script>";
+            echo "<script>alert('Username telah digunakan!');window.location.href='$signUpFailed';</script>";
         }
         else {
             $this->modelAkun->save([
@@ -81,7 +81,7 @@ class ControllerAkun extends BaseController
                 'validasi' => $validasi
             ]);
 
-            echo "<script>alert('Akun berhasil dibuat!');window.location.href='account';</script>";
+            echo "<script>alert('Akun berhasil dibuat!');window.location.href='$signUpSuccess';</script>";
         }
     }
 
