@@ -22,7 +22,7 @@ class ControllerPerpustakaan extends BaseController
             'title' => "test"
         ];
 
-        return view("content/viewUser", $data);
+        return view("content/viewMA", $data);
     }
 
     public function register()
