@@ -91,6 +91,12 @@ class ControllerAkun extends BaseController
         return redirect()->to('/viewSignInUp');
     }
 
+    public function delete($username){
+        $this->modelAkun->where('username', $username)->delete();
+
+        echo "<script>alert('Akun berhasil dihapus!');window.location.href='/user';</script>";
+    }
+
     public function findAccount($username){
         return $this->modelAkun->where('username', $username)->first();
     }

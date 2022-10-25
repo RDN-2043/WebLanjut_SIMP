@@ -40,13 +40,15 @@ $routes->get('/pinjam/(:any)', 'ControllerPerpustakaan::pinjam/$1');
 $routes->get('/account', 'ControllerPerpustakaan::signIn');
 $routes->get('/perpustakaan', 'ControllerPerpustakaan::perpustakaan');
 $routes->get('/profile', 'ControllerPerpustakaan::profile');
-$routes->get('/test', 'ControllerPerpustakaan::test');
 $routes->get('/history', 'ControllerPerpustakaan::history');
 $routes->get('/register', 'ControllerPerpustakaan::register');
+$routes->get('/user', 'ControllerPerpustakaan::user');
+$routes->get('/test', 'ControllerPerpustakaan::test');
 
 $routes->post('/signupuser', 'ControllerAkun::signUpUser');
 $routes->post('/signupadmin', 'ControllerAkun::signUpAdmin');
 $routes->post('/signin', 'ControllerAkun::signIn');
+$routes->get('/delete/(:any)', 'ControllerAkun::delete/$1');
 
 /*
  * --------------------------------------------------------------------

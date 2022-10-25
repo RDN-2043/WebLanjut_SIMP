@@ -2,10 +2,20 @@
 
 namespace App\Controllers;
 
+use App\Models\modelAkun;
 use App\Models\modelBuku;
 
 class ControllerPerpustakaan extends BaseController
 {
+    private $modelBuku;
+    private $modelAkun;
+
+    public function __construct()
+    {
+        $this->modelBuku = new modelBuku();
+        $this->modelAkun = new modelAkun();
+    }
+
     public function test()
     {
         $data = [
@@ -55,8 +65,7 @@ class ControllerPerpustakaan extends BaseController
 
     public function perpustakaan()
     {
-        $modelBuku = new modelBuku();
-        $listBuku = $modelBuku->findAll();
+        $listBuku = $this->modelBuku->findAll();
 
         $data = [
             'title' => "Perpustakaan",
@@ -64,6 +73,27 @@ class ControllerPerpustakaan extends BaseController
         ];
 
         return view('content/viewPerpustakaan', $data);
+    }
+
+    public function profile()
+    {
+        $data = [
+            'title' => "Profile"
+        ];
+
+        return view('content/viewProfile', $data);
+    }
+
+    public function user()
+    {
+        $listAkun = $this->modelAkun->findAll();
+
+        $data = [
+            'title' => "User",
+            'listAkun' => $listAkun
+        ];
+
+        return view('content/viewUser', $data);
     }
 
     public function pinjam($idBuku)
@@ -74,15 +104,6 @@ class ControllerPerpustakaan extends BaseController
         $this->decreaseBook($idBuku, $buku);
 
         return $this->perpustakaan();
-    }
-
-    public function profile()
-    {
-        $data = [
-            'title' => "Profile"
-        ];
-
-        return view('content/viewProfile', $data);
     }
 
     public function decreaseBook($idBuku, $buku)

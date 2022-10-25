@@ -1,0 +1,80 @@
+CRITICAL - 2022-10-24 19:54:20 --> Trying to access array offset on value of type null
+in APPPATH\Views\content\viewProfile.php on line 26.
+ 1 APPPATH\Views\content\viewProfile.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\content\\viewProfile.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewProfile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewProfile', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(85): view('content/viewProfile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->profile()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-10-24 19:54:29 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'weblanjut_simp', 3306, '', 0)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\WebLanjut_SIMP\app\Views\content\viewHistory.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#9 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Common.php(1142): CodeIgniter\View\View->render('content/viewHis...', Array, true)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(33): view('content/viewHis...', Array)
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->history()
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#13 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#16 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\WebLanjut_SIMP\app\Views\content\viewHistory.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(213): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#8 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Common.php(1142): CodeIgniter\View\View->render('content/viewHis...', Array, true)
+#9 C:\xampp\htdocs\WebLanjut_SIMP\app\Controllers\ControllerPerpustakaan.php(33): view('content/viewHis...', Array)
+#10 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->history()
+#11 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+#12 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\WebLanjut_SIMP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\WebLanjut_SIMP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+CRITICAL - 2022-10-24 19:54:29 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tabel_akun`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Views\content\viewHistory.php(11): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewHistory.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewHistory', [], true)
+ 9 APPPATH\Controllers\ControllerPerpustakaan.php(33): view('content/viewHistory', [...])
+10 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->history()
+11 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+12 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-10-24 20:05:28 --> Undefined variable $listAkun
+in APPPATH\Views\content\viewUser.php on line 33.
+ 1 APPPATH\Views\content\viewUser.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listAkun', 'APPPATH\\Views\\content\\viewUser.php', 33)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewUser', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(25): view('content/viewUser', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerPerpustakaan->test()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

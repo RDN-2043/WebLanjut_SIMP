@@ -88,7 +88,7 @@
                         </li>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/test">User</a>
+                            <a class="nav-link" href="/user">User</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/history">History</a>
