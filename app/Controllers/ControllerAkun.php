@@ -94,7 +94,7 @@ class ControllerAkun extends BaseController
     public function delete($username){
         $this->modelAkun->where('username', $username)->delete();
 
-        echo "<script>alert('Akun berhasil dihapus!');window.location.href='/user';</script>";
+        echo "<script>alert('Akun berhasil dihapus!');window.location.href='user';</script>";
     }
 
     public function findAccount($username){

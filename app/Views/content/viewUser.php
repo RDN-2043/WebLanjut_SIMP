@@ -34,7 +34,7 @@
                         $urlDelete = "delete/" . $akun['username'];
                     ?>
                         <tr>
-                            <td><?= $i; ?></td>
+                            <td><?= $i++; ?></td>
                             <td><?= $akun['username']; ?></td>
                             <td><?= $akun['ditambahkan']; ?></td>
                             <td><?= $akun['tipe']; ?></td>
