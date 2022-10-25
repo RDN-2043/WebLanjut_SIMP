@@ -49,6 +49,7 @@ $routes->post('/signupuser', 'ControllerAkun::signUpUser');
 $routes->post('/signupadmin', 'ControllerAkun::signUpAdmin');
 $routes->post('/signin', 'ControllerAkun::signIn');
 $routes->get('/delete/(:any)', 'ControllerAkun::delete/$1');
+$routes->get('/logout', 'ControllerAkun::logout');
 
 /*
  * --------------------------------------------------------------------

@@ -86,9 +86,13 @@ class ControllerAkun extends BaseController
     }
 
     public function logOut(){
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
         session_destroy();
 
-        return redirect()->to('/viewSignInUp');
+        return redirect()->to('/account');
     }
 
     public function delete($username){

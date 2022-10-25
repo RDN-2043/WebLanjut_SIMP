@@ -1,0 +1,9 @@
+CRITICAL - 2022-10-25 06:57:30 --> session_destroy(): Trying to destroy uninitialized session
+in APPPATH\Controllers\ControllerAkun.php on line 89.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'session_destroy(): Trying to destroy uninitialized session', 'APPPATH\\Controllers\\ControllerAkun.php', 89)
+ 2 APPPATH\Controllers\ControllerAkun.php(89): session_destroy()
+ 3 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerAkun->logOut()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
