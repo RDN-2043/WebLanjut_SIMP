@@ -44,6 +44,7 @@ $routes->get('/history', 'ControllerPerpustakaan::history');
 $routes->get('/register', 'ControllerPerpustakaan::register');
 $routes->get('/user', 'ControllerPerpustakaan::user');
 $routes->get('/test', 'ControllerPerpustakaan::test');
+$routes->get('/validation', 'ControllerPerpustakaan::validation');
 
 $routes->post('/signupuser', 'ControllerAkun::signUpUser');
 $routes->post('/signupadmin', 'ControllerAkun::signUpAdmin');

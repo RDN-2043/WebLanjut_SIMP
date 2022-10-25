@@ -25,6 +25,15 @@ class ControllerPerpustakaan extends BaseController
         return view("content/viewMA", $data);
     }
 
+    public function validation()
+    {
+        $data = [
+            'title' => "validation"
+        ];
+
+        return view("content/viewValidation", $data);
+    }
+
     public function register()
     {
         $data = [
