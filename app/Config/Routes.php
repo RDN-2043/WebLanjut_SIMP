@@ -49,8 +49,12 @@ $routes->get('/validation', 'ControllerPerpustakaan::validation');
 $routes->post('/signupuser', 'ControllerAkun::signUpUser');
 $routes->post('/signupadmin', 'ControllerAkun::signUpAdmin');
 $routes->post('/signin', 'ControllerAkun::signIn');
+$routes->get('/masteradmin', 'ControllerAkun::masteradmin');
+$routes->get('/admin', 'ControllerAkun::admin');
+$routes->get('/user', 'ControllerAkun::user');
 $routes->get('/delete/(:any)', 'ControllerAkun::delete/$1');
 $routes->get('/logout', 'ControllerAkun::logout');
+$routes->get('/validateUserAccount/(:any)', 'ControllerAkun::validateUserAccount/$1');
 
 /*
  * --------------------------------------------------------------------

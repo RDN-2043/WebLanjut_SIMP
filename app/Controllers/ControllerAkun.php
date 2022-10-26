@@ -2,16 +2,24 @@
 
 namespace App\Controllers;
 
-use App\Models\modelAkun;
 use App\Controllers\ControllerPerpustakaan;
+use App\Models\modelAkun;
+use App\Models\modelBuku;
+use App\Models\modelPinjam;
 
 class ControllerAkun extends BaseController
 {
+    private $controllerPerpustakaan;
     private $modelAkun;
+    private $modelBuku;
+    private $modelPinjam;
 
     public function __construct()
     {
+        $this->controllerPerpustakaan = new ControllerPerpustakaan();
         $this->modelAkun = new modelAkun();
+        $this->modelBuku = new modelBuku();
+        $this->modelPinjam = new modelPinjam();
     }
 
     public function signIn()
@@ -34,15 +42,15 @@ class ControllerAkun extends BaseController
 
                 switch ($akun['tipe']) {
                     case "Master-Admin":
-                        return redirect()->to('/viewMasterAdmin');
+                        return redirect()->to('/masteradmin');
                         break;
 
                     case "Admin":
-                        return redirect()->to('/viewAdmin');
+                        return redirect()->to('/admin');
                         break;
 
                     case "User":
-                        return redirect()->to('/perpustakaan');
+                        return redirect()->to('/user');
                         break;
                 }
             }
@@ -85,6 +93,42 @@ class ControllerAkun extends BaseController
         }
     }
 
+    public function masterAdmin()
+    {
+        $totalAdmin = count($this->modelAkun->where('tipe', "Admin")->findAll());
+        $totalUser = count($this->modelAkun->where('tipe', "User")->findAll());
+        $totalBuku = count($this->modelBuku->findAll());
+        $totalHistory = count($this->modelPinjam->findAll());
+
+        $data = [
+            'title' => "Master Admin",
+            'totalAdmin' => $totalAdmin,
+            'totalUser' => $totalUser,
+            'totalBuku' => $totalBuku,
+            'totalHistory' => $totalHistory
+        ];
+
+        return view("content/viewMasterAdmin", $data);
+    }
+
+    public function admin()
+    {
+        $data = [
+            'title' => "Admin"
+        ];
+
+        return view("content/viewAdmin", $data);
+    }
+
+    public function user()
+    {
+        $data = [
+            'title' => "User"
+        ];
+
+        return view("content/viewPerpustakaan", $data);
+    }
+
     public function logOut(){
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
@@ -109,15 +153,13 @@ class ControllerAkun extends BaseController
         return $this->modelAkun->where('username', $username, 'password', $password)->first();
     }
 
-    public function validateUserAccount()
+    public function validateUserAccount($username)
     {
-        $modelAkun = new modelAkun();
-        $username = $this->request->getVar('username');
-
         $data = [
-            'validasi' => true
+            'validasi' => 1
         ];
 
-        $modelAkun->update($username, $data);
+        $this->modelAkun->set($data)->where('username', $username)->update();
+        return $this->controllerPerpustakaan->validation();
     }
 }

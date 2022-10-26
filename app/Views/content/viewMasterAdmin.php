@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/MA.css">
+    <link rel="stylesheet" href="/css/viewMasterAdmin.css">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css">
@@ -22,6 +22,19 @@
 </head>
 
 <body>
+    <?php
+
+    $akun = null;
+
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    if (isset($_SESSION['akun'])) {
+        $akun = $_SESSION['akun'];
+    }
+
+    ?>
 
     <div id="wrapper">
 
@@ -42,7 +55,7 @@
 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                        <i class="fa fa-user fa-fw"></i>Master Admin <b class="caret"></b>
+                        <i class="fa fa-user fa-fw"></i><?= $akun['username']; ?> <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -63,16 +76,16 @@
                         <li>
                             <a href="#" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         <li>
-                            <a href="#"><i class="fa fa-group fa-fw"></i> Admins</a>
+                            <a href="<?= base_url(); ?>"><i class="fa fa-group fa-fw"></i> Admins</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-book fa-fw"></i> Books</a>
+                            <a href="<?= base_url('perpustakaan'); ?>"><i class="fa fa-book fa-fw"></i> Books</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-user fa-fw"></i> Users</a>
+                            <a href="<?= base_url('user'); ?>"><i class="fa fa-user fa-fw"></i> Users</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-history fa-fw"></i> History</a>
+                            <a href="<?= base_url('history'); ?>"><i class="fa fa-history fa-fw"></i> History</a>
                         </li>
                     </ul>
                 </div>
@@ -97,12 +110,12 @@
                                         <i class="fa fa-group fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">26</div>
+                                        <div class="huge"><?= $totalAdmin; ?></div>
                                         <div>Total Admins</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="<?= base_url(); ?>">
                                 <div class="panel-footer">
                                     <a href="#"><span class="pull-left">View Details</span></a>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -120,12 +133,12 @@
                                         <i class="fa fa-book fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
+                                        <div class="huge"><?= $totalBuku; ?></div>
                                         <div>Total Books</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="<?= base_url('perpustakaan'); ?>">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -143,12 +156,12 @@
                                         <i class="fa fa-user fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">124</div>
+                                        <div class="huge"><?= $totalUser; ?></div>
                                         <div>Total Users</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="<?= base_url('user'); ?>">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -166,12 +179,12 @@
                                         <i class="fa fa-history fa-5x"></i>
                                     </div>
                                     <div class="col-xs-9 text-right">
-                                        <div class="huge">13</div>
+                                        <div class="huge"><?= $totalHistory; ?></div>
                                         <div>History</div>
                                     </div>
                                 </div>
                             </div>
-                            <a href="#">
+                            <a href="<?= base_url('history'); ?>">
                                 <div class="panel-footer">
                                     <span class="pull-left">View Details</span>
                                     <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

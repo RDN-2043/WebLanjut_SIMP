@@ -27,13 +27,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>fadil</td>
-                        <td>admin</td>
-                        <td><span class="status text-success">&bull;</span> Validated</td>
-                        <td><button type='submit' class='btn btn-primary'>Validate</button></td>
-                    </tr>
+                    <?php
+                    $i = 1;
+                    foreach ($listAkun as $akun) :
+                        $redirectTo = "validateUserAccount/" . $akun['username'];
+                    ?>
+                        <tr>
+                            <td><?= $i++; ?></td>
+                            <td><?= $akun['username']; ?></td>
+                            <td><?= $akun['tipe']; ?></td>
+                            <td><span class="status text-danger">&bull;</span> Not Validated</td>
+                            <td><a class='btn btn-primary' href="<?= base_url($redirectTo); ?>">Validate</a></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         </div>

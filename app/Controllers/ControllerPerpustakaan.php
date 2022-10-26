@@ -22,13 +22,16 @@ class ControllerPerpustakaan extends BaseController
             'title' => "test"
         ];
 
-        return view("content/viewMA", $data);
+        return view("content/viewMasterAdmin", $data);
     }
 
     public function validation()
     {
+        $listAkun = $this->modelAkun->where('validasi', 0)->findAll();
+
         $data = [
-            'title' => "validation"
+            'title' => "validation",
+            'listAkun' => $listAkun
         ];
 
         return view("content/viewValidation", $data);
