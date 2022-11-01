@@ -93,7 +93,16 @@ class ControllerPerpustakaan extends BaseController
             'title' => "Profile"
         ];
 
-        return view('content/viewProfile', $data);
+        return view('content/viewBookInput', $data);
+    }
+
+    public function dashboard()
+    {
+        $data = [
+            'title' => "dashboard"
+        ];
+
+        return view('content/viewDashboard', $data);
     }
 
     public function user()

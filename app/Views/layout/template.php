@@ -143,7 +143,7 @@
                 <div class="mr-auto"></div>
                 <ul class="navbar-nav my-2 my-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?= base_url('perpustakaan'); ?>">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?= base_url('dashboard'); ?>">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?= base_url('user'); ?>">User <span class="sr-only">(current)</span></a>
@@ -156,6 +156,9 @@
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?= base_url('validation'); ?>">Validation <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="<?= base_url('perpustakaan'); ?>">Library <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

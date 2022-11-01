@@ -50,7 +50,7 @@ class ControllerAkun extends BaseController
                         break;
 
                     case "User":
-                        return redirect()->to('/user');
+                        return redirect()->to('/dashboard');
                         break;
                 }
             }
