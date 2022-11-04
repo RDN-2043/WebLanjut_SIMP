@@ -160,6 +160,6 @@ class ControllerAkun extends BaseController
         ];
 
         $this->modelAkun->set($data)->where('username', $username)->update();
-        return $this->controllerPerpustakaan->validation();
+        return $this->controllerPerpustakaan->user();
     }
 }

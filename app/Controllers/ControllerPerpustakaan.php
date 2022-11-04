@@ -25,18 +25,6 @@ class ControllerPerpustakaan extends BaseController
         return view("content/viewMasterAdmin", $data);
     }
 
-    public function validation()
-    {
-        $listAkun = $this->modelAkun->where('validasi', 0)->findAll();
-
-        $data = [
-            'title' => "validation",
-            'listAkun' => $listAkun
-        ];
-
-        return view("content/viewValidation", $data);
-    }
-
     public function register()
     {
         $data = [
@@ -107,11 +95,13 @@ class ControllerPerpustakaan extends BaseController
 
     public function user()
     {
-        $listAkun = $this->modelAkun->findAll();
+        $listAkun = $this-> modelAkun->where('validasi', 1)->findAll();
+        $listValidating = $this->modelAkun->where('validasi', 0)->findAll();
 
         $data = [
             'title' => "User",
-            'listAkun' => $listAkun
+            'listAkun' => $listAkun,
+            'listValidating' => $listValidating
         ];
 
         return view('content/viewUser', $data);
