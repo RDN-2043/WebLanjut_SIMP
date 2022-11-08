@@ -1,10 +1,10 @@
-<?= $this->extend('layout/templateAdmin'); ?>
+<?= $this->extend('layout/templateUser'); ?>
 
 <?= $this->section('content'); ?>
 <link rel="stylesheet" href="/css/viewPerpustakaan.css">
 <div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">Daftar Buku</h1>
+    <div class="col-lg-8">
+        <h4 class="page-header">Daftar Buku</h4>
     </div>
     <!-- /.col-lg-12 -->
 </div>
