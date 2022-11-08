@@ -85,6 +85,9 @@
                             <a href="<?= base_url('perpustakaan'); ?>"><i class="fa fa-book fa-fw"></i> Books</a>
                         </li>
                         <li>
+                            <a href="<?= base_url('dummy'); ?>"><i class="fa fa-book fa-fw"></i> Input Buku</a>
+                        </li>
+                        <li>
                             <a href="<?= base_url('user'); ?>"><i class="fa fa-user fa-fw"></i> Users</a>
                         </li>
                         <li>

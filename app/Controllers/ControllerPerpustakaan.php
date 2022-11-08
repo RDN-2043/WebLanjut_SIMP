@@ -93,6 +93,15 @@ class ControllerPerpustakaan extends BaseController
         return view('content/viewDashboard', $data);
     }
 
+    public function dummy()
+    {
+        $data = [
+            'title' => "dummy"
+        ];
+
+        return view('content/viewDummy', $data);
+    }
+
     public function user()
     {
         $listAkun = $this-> modelAkun->where('validasi', 1)->findAll();
