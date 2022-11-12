@@ -87,7 +87,7 @@ class ControllerPerpustakaan extends BaseController
     public function dashboard()
     {
         $data = [
-            'title' => "dashboard"
+            'title' => "Dashboard"
         ];
 
         return view('content/viewDashboard', $data);
@@ -118,22 +118,45 @@ class ControllerPerpustakaan extends BaseController
 
     public function pinjam($idBuku)
     {
-        $modelBuku = new modelBuku();
-        $buku = $modelBuku->where('id', $idBuku)->first();
+        $buku = $this->modelBuku->where('id', $idBuku)->first();
 
         $this->decreaseBook($idBuku, $buku);
 
         return $this->perpustakaan();
     }
 
+    public function simpanBuku(){
+        $data = [
+            'id' => $this->request->getVar('id'),
+            'isbn' => $this->request->getVar('isbn'),
+            'judul' => $this->request->getVar('judul'),
+            'pengarang' => $this->request->getVar('pengarang'),
+            'penerbit' => $this->request->getVar('penerbit'),
+            'terbit' => $this->request->getVar('terbit'),
+            'jumlah' => $this->request->getVar('jumlah')
+        ];
+
+        $this->modelBuku->save($data);
+
+        return redirect()->to('/perpustakaan');
+    }
+
+    public function updateBuku($idBuku)
+    {
+        $data = [
+            'title' => "Update buku",
+            'buku' => $this->modelBuku->where('id', $idBuku)->first()
+        ];
+
+        return view('content/viewBooksInput', $data);
+    }
+
     public function decreaseBook($idBuku, $buku)
     {
-        $modelBuku = new modelBuku();
-
         $data = [
             'jumlah' => $buku['jumlah'] - 1
         ];
 
-        $modelBuku->update($idBuku, $data);
+        $this->modelBuku->update($idBuku, $data);
     }
 }

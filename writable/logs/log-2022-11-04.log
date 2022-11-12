@@ -1,0 +1,26 @@
+CRITICAL - 2022-11-04 09:13:01 --> Undefined variable $listValidating
+in APPPATH\Views\content\viewUser.php on line 92.
+ 1 APPPATH\Views\content\viewUser.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listValidating', 'APPPATH\\Views\\content\\viewUser.php', 92)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewUser', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(37): view('content/viewUser', [...])
+ 6 APPPATH\Controllers\ControllerAkun.php(163): App\Controllers\ControllerPerpustakaan->validation()
+ 7 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerAkun->validateUserAccount('rdn4')
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-04 09:13:12 --> Undefined variable $listValidating
+in APPPATH\Views\content\viewUser.php on line 92.
+ 1 APPPATH\Views\content\viewUser.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listValidating', 'APPPATH\\Views\\content\\viewUser.php', 92)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\content\\viewUser.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1142): CodeIgniter\View\View->render('content/viewUser', [], true)
+ 5 APPPATH\Controllers\ControllerPerpustakaan.php(37): view('content/viewUser', [...])
+ 6 APPPATH\Controllers\ControllerAkun.php(163): App\Controllers\ControllerPerpustakaan->validation()
+ 7 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\ControllerAkun->validateUserAccount('rdn3')
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerAkun))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

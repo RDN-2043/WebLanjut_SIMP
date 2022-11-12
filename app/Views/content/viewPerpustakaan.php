@@ -1,6 +1,23 @@
 <?= $this->extend('layout/templateUser'); ?>
 
 <?= $this->section('content'); ?>
+<?php
+
+use App\Models\modelAkun;
+
+$modelAkun = new modelAkun();
+$akun = null;
+
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+if (isset($_SESSION['akun'])) {
+  $akun = $_SESSION['akun'];
+}
+
+?>
+
 <link rel="stylesheet" href="/css/viewPerpustakaan.css">
 <div class="row">
     <div class="col-lg-8">
@@ -36,14 +53,25 @@
                     <td class="align-middle text-center"><?= $data['isbn']; ?></td>
                     <td class="align-middle text-center"><?= $data['jumlah']; ?></td>
                     <td class="align-middle text-center">
-                        <form action="/pinjam/<?= $data['id']; ?>">
-                            <?php
-                            if ($data['jumlah'] > 0) {
-                                print "<button type='submit' class='btn btn-primary'><i class='fa fa-paper-plane'></i>Pinjam</button>";
+                        <?php
+                        if($akun['tipe'] == "User"){
+                            $redirectTo = "/pinjam/" . $data['id'];
+                            $btnName = "Pinjam";
+                        }else {
+                            $redirectTo = "/updatebuku/" . $data['id'];
+                            $btnName = "Tambah";
+                        }
+
+                        ?>
+                        <form action="<?= $redirectTo; ?>">
+                        <button type="submit" class="btn btn-primary <?= $data['jumlah'] == 0 ? "disabled" : ""; ?>"><i class="fa fa-paper-plane"></i><?= $btnName; ?></button>
+                        <?php
+                            /*if ($data['jumlah'] > 0) {
+                                echo "<button type='submit' class='btn btn-primary'><i class='fa fa-paper-plane'></i>Pinjam</button>";
                             } else {
-                                print "<button type='submit' class='btn btn-primary disabled'><i class='fa fa-paper-plane'></i>Pinjam</button>";
-                            }
-                            ?>
+                                echo "<button type='submit' class='btn btn-primary disabled'><i class='fa fa-paper-plane'></i>Pinjam</button>";
+                            }*/
+                        ?>
                         </form>
                     </td>
                 </tr>

@@ -117,7 +117,7 @@ class ControllerAkun extends BaseController
             'title' => "Admin"
         ];
 
-        return view("content/viewAdmin", $data);
+        return $this->masterAdmin();//view("content/viewAdmin", $data);
     }
 
     public function user()
