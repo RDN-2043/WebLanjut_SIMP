@@ -81,7 +81,7 @@ class ControllerPerpustakaan extends BaseController
             'title' => "Profile"
         ];
 
-        return view('content/viewBookInput', $data);
+        return view('content/viewProfile', $data);
     }
 
     public function dashboard()
