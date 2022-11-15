@@ -1,0 +1,17 @@
+CRITICAL - 2022-11-15 07:05:50 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\ControllerPerpustakaan.php on line 157.
+ 1 APPPATH\Controllers\ControllerPerpustakaan.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\ControllerPerpustakaan.php', 157)
+ 2 APPPATH\Controllers\ControllerPerpustakaan.php(123): App\Controllers\ControllerPerpustakaan->decreaseBook('style.css', null)
+ 3 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->pinjam('style.css')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-15 07:46:30 --> Undefined variable $listBuku
+in APPPATH\Controllers\ControllerPerpustakaan.php on line 72.
+ 1 APPPATH\Controllers\ControllerPerpustakaan.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $listBuku', 'APPPATH\\Controllers\\ControllerPerpustakaan.php', 72)
+ 2 SYSTEMPATH\CodeIgniter.php(902): App\Controllers\ControllerPerpustakaan->perpustakaan()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ControllerPerpustakaan))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

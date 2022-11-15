@@ -41,6 +41,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="navbar-header">
+                <ion-icon name="bookmark"></ion-icon>
                 <a class="navbar-brand" href="index.html"><i class="fa fa-bookmark fa-fw"></i> SIMPERS</a>
             </div>
 

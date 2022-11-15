@@ -65,14 +65,14 @@ class ControllerPerpustakaan extends BaseController
 
     public function perpustakaan()
     {
-        $listBuku = $this->modelBuku->findAll();
+        // $listBuku = $this->modelBuku->findAll();
 
         $data = [
-            'title' => "Perpustakaan",
-            'listBuku' => $listBuku
+            'title' => "Perpustakaan"
+            // 'listBuku' => $listBuku
         ];
 
-        return view('content/viewPerpustakaan', $data);
+        return view('content/viewLibrary', $data);
     }
 
     public function profile()
