@@ -53,48 +53,31 @@
 
        <div class="products__inner">             
         <div class="content-blocks">
-             <div class="content__block mix category-a category-new" data-order="1">
-                 <img class="content__block_img" src="" alt="">
-                 <a href="#" class="content__block-img">
-                 <button class="button-info" type="submit">Info</button>
-                 <button class="button-demo" type="submit">Pinjam</button>
-                </a>
-                 
-                 
-                 <div class="content__desc">
+            <div class="content__block" data-order="1">                
+                <div class="content__desc">
+                   
+                    <div class="content__desc-title">
+                        Buku 1    
+                    </div>
                     
-                     <div class="content__desc-title">
-                         Buku 1    
-                     </div>
+                    <div class="content__desc-name">
+                        <div class="content__desc-theme">
+                            Penulis    
+                        </div>
+                    </div>
                      
-                     <div class="content__desc-name">
-                        <a href="#"><img class="content__desc-circle" src="img/weekly/user-Ellipse.png" alt="circle"></a>
-                         <div class="content__desc-theme">
-                             Penulis    
-                         </div>
-                     </div>
-                      
-                    <div class="content__desc-text">
-                         Deskripsi......   
-                    </div> 
-                    
-                    <div class="content__item">
-                       
-                        <a href="#" class="content__item-money">
-                            Kategori
-                        </a>                        
-                    </div>    
-                 </div> 
-             </div> 
-
-             <div class="content__block mix category-a category-new" data-order="2">
-                <img class="content__block_img" src="" alt="">
-                <a href="#" class="content__block-img">
-                <button class="button-info" type="submit">Info</button>
-                <button class="button-demo" type="submit">Pinjam</button>
-               </a>
-                
-                
+                   <div class="content__desc-text">
+                    Deskripsi   
+                   </div> 
+                   
+                   <div class="content__desc-title">
+                    <button class="button-deskripsi" type="submit"><b>INFO</b></button>
+                    <button class="button-pinjam" type="submit"><B>PINJAM</B></button>                       
+                   </div>    
+                </div> 
+            </div>
+            
+            <div class="content__block" data-order="2">                
                 <div class="content__desc">
                    
                     <div class="content__desc-title">
@@ -102,33 +85,23 @@
                     </div>
                     
                     <div class="content__desc-name">
-                       <a href="#"><img class="content__desc-circle" src="img/weekly/user-Ellipse.png" alt="circle"></a>
                         <div class="content__desc-theme">
                             Penulis    
                         </div>
                     </div>
                      
                    <div class="content__desc-text">
-                        Deskripsi......   
+                    Deskripsi   
                    </div> 
                    
-                   <div class="content__item">
-                      
-                       <a href="#" class="content__item-money">
-                           Kategori
-                       </a>                        
+                   <div class="content__desc-title">
+                    <button class="button-deskripsi" type="submit"><b>INFO</b></button>
+                    <button class="button-pinjam" type="submit"><B>PINJAM</B></button>                       
                    </div>    
                 </div> 
-            </div> 
+            </div>
 
-            <div class="content__block mix category-a category-new" data-order="3">
-                <img class="content__block_img" src="" alt="">
-                <a href="#" class="content__block-img">
-                <button class="button-info" type="submit">Info</button>
-                <button class="button-demo" type="submit">Pinjam</button>
-               </a>
-                
-                
+            <div class="content__block" data-order="3">                
                 <div class="content__desc">
                    
                     <div class="content__desc-title">
@@ -136,33 +109,23 @@
                     </div>
                     
                     <div class="content__desc-name">
-                       <a href="#"><img class="content__desc-circle" src="img/weekly/user-Ellipse.png" alt="circle"></a>
                         <div class="content__desc-theme">
                             Penulis    
                         </div>
                     </div>
                      
                    <div class="content__desc-text">
-                        Deskripsi......   
+                    Deskripsi   
                    </div> 
                    
-                   <div class="content__item">
-                      
-                       <a href="#" class="content__item-money">
-                           Kategori
-                       </a>                        
+                   <div class="content__desc-title">
+                    <button class="button-deskripsi" type="submit"><b>INFO</b></button>
+                    <button class="button-pinjam" type="submit"><B>PINJAM</B></button>                       
                    </div>    
                 </div> 
-            </div> 
+            </div>
 
-            <div class="content__block mix category-a category-new" data-order="4">
-                <img class="content__block_img" src="" alt="">
-                <a href="#" class="content__block-img">
-                <button class="button-info" type="submit">Info</button>
-                <button class="button-demo" type="submit">Pinjam</button>
-               </a>
-                
-                
+            <div class="content__block" data-order="4">                
                 <div class="content__desc">
                    
                     <div class="content__desc-title">
@@ -170,33 +133,23 @@
                     </div>
                     
                     <div class="content__desc-name">
-                       <a href="#"><img class="content__desc-circle" src="img/weekly/user-Ellipse.png" alt="circle"></a>
                         <div class="content__desc-theme">
                             Penulis    
                         </div>
                     </div>
                      
                    <div class="content__desc-text">
-                        Deskripsi......   
+                    Deskripsi   
                    </div> 
                    
-                   <div class="content__item">
-                      
-                       <a href="#" class="content__item-money">
-                           Kategori
-                       </a>                        
+                   <div class="content__desc-title">
+                    <button class="button-deskripsi" type="submit"><b>INFO</b></button>
+                    <button class="button-pinjam" type="submit"><B>PINJAM</B></button>                       
                    </div>    
                 </div> 
-            </div> 
+            </div>
 
-            <div class="content__block mix category-a category-new" data-order="5">
-                <img class="content__block_img" src="" alt="">
-                <a href="#" class="content__block-img">
-                <button class="button-info" type="submit">Info</button>
-                <button class="button-demo" type="submit">Pinjam</button>
-               </a>
-                
-                
+            <div class="content__block" data-order="5">                
                 <div class="content__desc">
                    
                     <div class="content__desc-title">
@@ -204,58 +157,45 @@
                     </div>
                     
                     <div class="content__desc-name">
-                       <a href="#"><img class="content__desc-circle" src="img/weekly/user-Ellipse.png" alt="circle"></a>
                         <div class="content__desc-theme">
                             Penulis    
                         </div>
                     </div>
                      
                    <div class="content__desc-text">
-                        Deskripsi......   
+                    Deskripsi   
                    </div> 
                    
-                   <div class="content__item">
-                      
-                       <a href="#" class="content__item-money">
-                           Kategori
-                       </a>                        
+                   <div class="content__desc-title">
+                    <button class="button-deskripsi" type="submit"><b>INFO</b></button>
+                    <button class="button-pinjam" type="submit"><B>PINJAM</B></button>                       
                    </div>    
                 </div> 
-            </div> 
+            </div>
 
-            <div class="content__block mix category-a category-new" data-order="6">
-                <img class="content__block_img" src="" alt="">
-                <a href="#" class="content__block-img">
-                <button class="button-info" type="submit">Info</button>
-                <button class="button-demo" type="submit">Pinjam</button>
-               </a>
-                
-                
+            <div class="content__block" data-order="6">                
                 <div class="content__desc">
                    
                     <div class="content__desc-title">
-                        Buku 6
+                        Buku 6    
                     </div>
                     
                     <div class="content__desc-name">
-                       <a href="#"><img class="content__desc-circle" src="img/weekly/user-Ellipse.png" alt="circle"></a>
                         <div class="content__desc-theme">
                             Penulis    
                         </div>
                     </div>
                      
                    <div class="content__desc-text">
-                        Deskripsi......   
+                    Deskripsi   
                    </div> 
                    
-                   <div class="content__item">
-                      
-                       <a href="#" class="content__item-money">
-                           Kategori
-                       </a>                        
+                   <div class="content__desc-title">
+                    <button class="button-deskripsi" type="submit"><b>INFO</b></button>
+                    <button class="button-pinjam" type="submit"><B>PINJAM</B></button>                       
                    </div>    
                 </div> 
-            </div> 
+            </div>
           
         </div>  
       </div>
