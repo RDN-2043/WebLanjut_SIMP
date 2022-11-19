@@ -39,7 +39,8 @@ $routes->post('/simpanbuku', 'ControllerPerpustakaan::simpanBuku');
 $routes->get('/', 'ControllerPerpustakaan::landingPage');
 $routes->get('/pinjam/(:any)', 'ControllerPerpustakaan::pinjam/$1');
 $routes->get('/account', 'ControllerPerpustakaan::signIn');
-$routes->get('/perpustakaan', 'ControllerPerpustakaan::perpustakaan');
+$routes->get('/libraryuser', 'ControllerPerpustakaan::libraryUser');
+$routes->get('/libraryadmin', 'ControllerPerpustakaan::libraryAdmin');
 $routes->get('/profile', 'ControllerPerpustakaan::profile');
 $routes->get('/history', 'ControllerPerpustakaan::history');
 $routes->get('/register', 'ControllerPerpustakaan::register');
@@ -48,6 +49,7 @@ $routes->get('/test', 'ControllerPerpustakaan::test');
 $routes->get('/dashboard', 'ControllerPerpustakaan::dashboard');
 $routes->get('/dummy', 'ControllerPerpustakaan::dummy');
 $routes->get('/updatebuku/(:any)', 'ControllerPerpustakaan::updateBuku/$1');
+$routes->get('/infobuku/(:any)', 'ControllerPerpustakaan::infoBuku/$1');
 
 $routes->post('/signupuser', 'ControllerAkun::signUpUser');
 $routes->post('/signupadmin', 'ControllerAkun::signUpAdmin');

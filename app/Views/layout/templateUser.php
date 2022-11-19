@@ -141,7 +141,7 @@
                         <a class="nav-link" href="<?= base_url('user'); ?>">User <span class="sr-only">(current)</span></a>
                     </li> -->
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?= base_url('perpustakaan'); ?>">Library <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?= base_url('libraryuser'); ?>">Library <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="<?= base_url(''); ?>">History <span class="sr-only">(current)</span></a>

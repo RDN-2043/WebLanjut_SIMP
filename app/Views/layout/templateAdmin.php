@@ -83,7 +83,7 @@
                         </li>
                         <?php endif; ?>
                         <li>
-                            <a href="<?= base_url('perpustakaan'); ?>"><i class="fa fa-book fa-fw"></i> Books</a>
+                            <a href="<?= base_url('libraryadmin'); ?>"><i class="fa fa-book fa-fw"></i> Books</a>
                         </li>
                         <li>
                             <a href="<?= base_url('dummy'); ?>"><i class="fa fa-book fa-fw"></i> Input Buku</a>

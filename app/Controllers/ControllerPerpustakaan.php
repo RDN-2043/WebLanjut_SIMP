@@ -22,7 +22,7 @@ class ControllerPerpustakaan extends BaseController
             'title' => "test"
         ];
 
-        return view("content/viewMasterAdmin", $data);
+        return view("content/viewInformation", $data);
     }
 
     public function register()
@@ -63,16 +63,28 @@ class ControllerPerpustakaan extends BaseController
         return view('content/viewLandingPage', $data);
     }
 
-    public function perpustakaan()
+    public function libraryAdmin()
     {
         // $listBuku = $this->modelBuku->findAll();
 
         $data = [
-            'title' => "Perpustakaan"
-            // 'listBuku' => $listBuku
+            'title' => "Daftar Buku",
+            'listBuku' => $this->modelBuku->findAll()
         ];
 
-        return view('content/viewLibrary', $data);
+        return view('content/viewLibraryAdmin', $data);
+    }
+
+    public function libraryUser()
+    {
+        // $listBuku = $this->modelBuku->findAll();
+
+        $data = [
+            'title' => "Perpustakaan",
+            'listBuku' => $this->modelBuku->findAll()
+        ];
+
+        return view('content/viewLibraryUser', $data);
     }
 
     public function profile()
@@ -122,7 +134,7 @@ class ControllerPerpustakaan extends BaseController
 
         $this->decreaseBook($idBuku, $buku);
 
-        return $this->perpustakaan();
+        return $this->libraryUser();
     }
 
     public function simpanBuku(){
@@ -158,5 +170,14 @@ class ControllerPerpustakaan extends BaseController
         ];
 
         $this->modelBuku->update($idBuku, $data);
+    }
+
+    public function infoBuku($idBuku){
+        $data = [
+            'title' => "Informasi Buku",
+            'buku' => $this->modelBuku->where('id', $idBuku)->first()
+        ];
+
+        return view('content/viewInformation', $data);
     }
 }
