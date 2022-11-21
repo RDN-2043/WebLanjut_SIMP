@@ -48,6 +48,7 @@ $routes->get('/user', 'ControllerPerpustakaan::user');
 $routes->get('/test', 'ControllerPerpustakaan::test');
 $routes->get('/dashboard', 'ControllerPerpustakaan::dashboard');
 $routes->get('/dummy', 'ControllerPerpustakaan::dummy');
+$routes->get('/returnbook', 'ControllerPerpustakaan::returnbook');
 $routes->get('/updatebuku/(:any)', 'ControllerPerpustakaan::updateBuku/$1');
 $routes->get('/infobuku/(:any)', 'ControllerPerpustakaan::infoBuku/$1');
 
