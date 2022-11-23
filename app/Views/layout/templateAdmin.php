@@ -59,12 +59,7 @@
                         <i class="fa fa-user fa-fw"></i><?= $akun['username']; ?> <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="<?= base_url(); ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                 </li>
@@ -77,16 +72,16 @@
                         <li>
                             <a href="<?= base_url('masteradmin'); ?>" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                        <?php if($akun['tipe'] == "Master-Admin"): ?>
-                        <li>
-                            <a href="<?= base_url(); ?>"><i class="fa fa-group fa-fw"></i> Admins</a>
-                        </li>
+                        <?php if ($akun['tipe'] == "Master-Admin") : ?>
+                            <li>
+                                <a href="<?= base_url('admin'); ?>"><i class="fa fa-group fa-fw"></i> Admins</a>
+                            </li>
                         <?php endif; ?>
                         <li>
                             <a href="<?= base_url('libraryadmin'); ?>"><i class="fa fa-book fa-fw"></i> Books</a>
                         </li>
                         <li>
-                            <a href="<?= base_url('dummy'); ?>"><i class="fa fa-book fa-fw"></i> Input Buku</a>
+                            <a href="<?= base_url('updatebuku/-1'); ?>"><i class="fa fa-book fa-fw"></i> Input Buku</a>
                         </li>
                         <li>
                             <a href="<?= base_url('user'); ?>"><i class="fa fa-user fa-fw"></i> Users</a>

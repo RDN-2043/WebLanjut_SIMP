@@ -1,4 +1,4 @@
-<?= $this->extend('layout/templateUser'); ?>
+<?= $this->extend('layout/templateAdmin'); ?>
 
 <?= $this->section('content'); ?>
 <?php
@@ -59,7 +59,7 @@ if (isset($_SESSION['akun'])) {
                             $btnName = "Pinjam";
                         }else {
                             $redirectTo = "/updatebuku/" . $data['id'];
-                            $btnName = "Tambah";
+                            $btnName = "Edit";
                         }
 
                         ?>

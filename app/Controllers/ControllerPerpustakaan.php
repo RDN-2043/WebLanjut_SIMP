@@ -4,16 +4,19 @@ namespace App\Controllers;
 
 use App\Models\modelAkun;
 use App\Models\modelBuku;
+use App\Models\modelPinjam;
 
 class ControllerPerpustakaan extends BaseController
 {
     private $modelBuku;
     private $modelAkun;
+    private $modelPinjam;
 
     public function __construct()
     {
         $this->modelBuku = new modelBuku();
         $this->modelAkun = new modelAkun();
+        $this->modelPinjam = new modelPinjam();
     }
 
     public function test()
@@ -22,7 +25,7 @@ class ControllerPerpustakaan extends BaseController
             'title' => "test"
         ];
 
-        return view("content/viewInformation", $data);
+        return view("content/viewBooksInput", $data);
     }
 
     public function register()
@@ -105,19 +108,27 @@ class ControllerPerpustakaan extends BaseController
         return view('content/viewDashboard', $data);
     }
 
-    public function dummy()
-    {
-        $data = [
-            'title' => "dummy"
-        ];
-
-        return view('content/viewDummy', $data);
-    }
-
     public function returnbook()
     {
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (isset($_SESSION['akun'])) {
+            $akun = $_SESSION['akun'];
+        }
+
+        $listPinjam = $this->modelPinjam->where('username', $akun['username'])->findAll();
+        $listBuku = array();
+
+        foreach($listPinjam as $pinjam){
+            $listBuku[] = $this->modelBuku->where('isbn', $pinjam['isbn'])->first();
+        }
+
         $data = [
-            'title' => "returnbook"
+            'title' => "returnbook",
+            'listBuku' => $listBuku,
+            'akun' => $akun
         ];
 
         return view('content/viewReturnBook', $data);
@@ -137,6 +148,18 @@ class ControllerPerpustakaan extends BaseController
         return view('content/viewUser', $data);
     }
 
+    public function admin()
+    {
+        $listAkun = $this->modelAkun->where('validasi', 1)->findAll();
+
+        $data = [
+            'title' => "Admin",
+            'listAkun' => $listAkun
+        ];
+
+        return view('content/viewAdmin', $data);
+    }
+
     public function pinjam($idBuku)
     {
         $buku = $this->modelBuku->where('id', $idBuku)->first();
@@ -144,6 +167,13 @@ class ControllerPerpustakaan extends BaseController
         $this->decreaseBook($idBuku, $buku);
 
         return $this->libraryUser();
+    }
+
+    public function kembalikanBuku($idBuku){
+        $this->increaseBook($idBuku);
+        $this->modelPinjam->where('isbn', $this->modelBuku->where('id', $idBuku)->first()['isbn'])->delete();
+
+        return $this->returnbook();
     }
 
     public function simpanBuku(){
@@ -159,7 +189,7 @@ class ControllerPerpustakaan extends BaseController
 
         $this->modelBuku->save($data);
 
-        return redirect()->to('/perpustakaan');
+        return redirect()->to('/libraryadmin');
     }
 
     public function updateBuku($idBuku)
@@ -176,6 +206,15 @@ class ControllerPerpustakaan extends BaseController
     {
         $data = [
             'jumlah' => $buku['jumlah'] - 1
+        ];
+
+        $this->modelBuku->update($idBuku, $data);
+    }
+
+    public function increaseBook($idBuku)
+    {
+        $data = [
+            'jumlah' => $this->modelBuku->where('id', $idBuku)->first()['jumlah'] + 1
         ];
 
         $this->modelBuku->update($idBuku, $data);

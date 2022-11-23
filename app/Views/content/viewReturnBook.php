@@ -20,6 +20,22 @@
                     <th>Action</th>
                 </tr>
             </thead>
+            <tbody>
+                <?php
+                $i = 1;
+                foreach ($listBuku as $buku) :
+                    $urlDelete = "kembalikanbuku/" . $buku['id'];
+                ?>
+                    <tr>
+                        <td><?= $i++; ?></td>
+                        <td><?= $buku['judul']; ?></td>
+                        <td>Dipinjam</td>
+                        <td>
+                            <a href="<?= base_url($urlDelete); ?>" class="delete btn btn-danger" title="Delete" data-toggle="tooltip">Kembalikan</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
     </div>
 </div>

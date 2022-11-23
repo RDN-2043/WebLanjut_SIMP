@@ -25,9 +25,13 @@
 <section class="products">
     <div class="container">
         <div class="products__inner">
-            <div class="content-blocks">
-                <?php foreach ($listBuku as $buku) : ?>
-                    <div class="content__block" data-order="1">
+            <?php
+            $i = 0;
+            foreach ($listBuku as $buku) :
+                $i++;
+            ?>
+                <div class="content-blocks">
+                    <div class="content__block" data-order="<?= $i; ?>">
                         <div class="content__desc">
 
                             <div class="content__desc-title">
@@ -50,8 +54,8 @@
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
-            </div>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>

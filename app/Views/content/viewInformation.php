@@ -31,10 +31,6 @@
 
             <div class="weekly__inner">
                 <div class="weekly__inner-box">
-                    <a href="#" class="weekly__inner-img">
-                        <button class="weekly__button-info" type="submit">PINJAM</button>
-                    </a>
-
                     <div class="weekly__inner-content">
                         <div class="weekly__inner-title">
                             <?= $buku['judul']; ?>
@@ -53,8 +49,8 @@
 
                         <div class="weekly__item">
 
-                            <a href="#" class="weekly__item-money">
-                                Jumlah
+                            <a href="<?= base_url('pinjam/' . $buku['id']); ?>" class="weekly__item-money">
+                                Pinjam
                             </a>
                             <div class="weekly__item-star">
                                 <div class="rate-star"></div>

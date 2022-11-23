@@ -3,7 +3,7 @@
 <?= $this->section('content'); ?>
 
 <?php
-$id;
+$id = null;
 $isbn = "";
 $judul = "";
 $pengarang = "";
@@ -23,57 +23,44 @@ if (!empty($buku)) {
 
 ?>
 
-<div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Input New Books</h1>
-            </div>
+<div class="row">
+    <div class="col-lg-8">
+        <h4 class="page-header">Input Buku</h4>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+
+<form action="<?= base_url('simpanbuku'); ?>" method="post">
+    <input class="form-control" name="id" type="hidden" value="<?= $id; ?>">
+    <div class="row">
+        <div class="form-group col-sm-6">
+            <label for="Judulbuku">ISBN</label>
+            <input type="text" class="form-control" name="isbn" placeholder="ISBN" value="<?= $isbn; ?>">
         </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Please enter the data of the book with valid data!
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <form action="<?= base_url('simpanbuku'); ?>" method="post">
-                                    <input class="form-control" name="id" type="hidden" value="<?= $id; ?>">
-                                    <div class="form-group">
-                                        <label>ISBN</label>
-                                        <input class="form-control" name="isbn" value="<?= $isbn; ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Judul</label>
-                                        <input class="form-control" name="judul" value="<?= $judul; ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Pengarang</label>
-                                        <input class="form-control" name="pengarang" value="<?= $pengarang; ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Penerbit</label>
-                                        <input class="form-control" name="penerbit" value="<?= $penerbit; ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Terbit</label>
-                                        <input class="form-control" name="terbit" value="<?= $terbit; ?>">
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Jumlah</label>
-                                        <input class="form-control" name="jumlah" type="number" value="<?= $jumlah; ?>">
-                                    </div>
-                                    <button type="submit" class="btn btn-default">Simpan</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="form-group col-sm-6">
+            <label for="Judulbuku">Judul Buku</label>
+            <input type="text" class="form-control" name="judul" placeholder="Judul Buku" value="<?= $judul; ?>">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="Pengarang">Pengarang</label>
+            <input type="text" class="form-control" name="pengarang" placeholder="Nama Pengarang" value="<?= $pengarang; ?>">
         </div>
     </div>
-</div>
+    <div class="form-group">
+        <label for="Penerbit">Penerbit</label>
+        <input type="text" class="form-control" name="penerbit" placeholder="Penerbit" value="<?= $penerbit; ?>">
+    </div>
+    <div class="form-group">
+        <label for="TahunTerbit">Tahun Terbit</label>
+        <input type="text" class="form-control" name="terbit" placeholder="dd,mm,yy" value="<?= $terbit; ?>">
+    </div>
+    <div class="form-group">
+        <div class="form-group ">
+            <label for="Jumlah">Jumlah</label>
+            <input type="number" class="form-control" name="jumlah" placeholder="Masukkan Jumlah" value="<?= $jumlah; ?>">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Simpan</button>
+</form>
 
 <?= $this->endSection(); ?>
